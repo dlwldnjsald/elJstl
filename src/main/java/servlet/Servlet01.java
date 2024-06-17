@@ -46,13 +46,13 @@ public class Servlet01 extends HttpServlet {
 		//vo.setGender("");
 		
 		
-		//req 요청의 속성에 데이터 설정해주기
+		//req 요청 속성에 데이터 설정해주기
 		//현재 처리중인 객체에다 ->속성 추가한다 ->setAttribute 메서드 구현
-		request.setAttribute("iValue", iValue); //(이름,데이터)
-		request.setAttribute("fValue", fValue);
-		request.setAttribute("sValue", sValue);
-		request.setAttribute("bValue", bValue);
-		request.setAttribute("nullValue", nullValue);
+		request.setAttribute("iVal", iValue); //(이름, 데이터)
+		request.setAttribute("fVal", fValue);
+		request.setAttribute("sVal", sValue);
+		request.setAttribute("bVal", bValue);
+		request.setAttribute("nullVal", nullValue);
 		
 		//vo도 
 		request.setAttribute("userVo", vo);

@@ -15,11 +15,14 @@ public class Servlet02 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		// 1)
 		int iValue = 10;
 		float fValue = 3.14159f;
 		
 		request.setAttribute("iVal",iValue);
 		request.setAttribute("fVal",fValue);
+		
+		// 2)
 		request.setAttribute("reqVal", "abcdefgh");
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/02.jsp");
