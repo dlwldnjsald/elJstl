@@ -5,9 +5,11 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<!--  세팅한 속성을 호출해주기 -->
 <% 
 	List<UserVo> userList = (List<UserVo>)request.getAttribute("userList");
 %>
+
 
 <!DOCTYPE>
 <html>
@@ -18,6 +20,7 @@
 <body>
 	<h1>사용자 리스트</h1>
 	
+	<h3>Scriptlet 구현</h3>
 	<table border=1>
 		<tr>
 			<td>no</td><td>name</td><td>email</td>
@@ -35,13 +38,29 @@
 	
 	</table>
 	
-	
-	
-	
+	<h3>JSTL 구현</h3>
 	<table border=1>
 		<tr>
-			<td>no</td><td>name</td><td>email</td><td>status.index</td><td>status.count</td>
+			<td>no</td>
+			<td>name</td>
+			<td>email</td>
+			<td>status.index</td>
+			<td>status.count</td>
 		</tr>
+	<!--  컬렉션 객체 순회
+			c:forEach
+			- items : 순회할 컬렉션 객체
+			- var : 추출된 요소의 임시 이름 
+			- varStatus : 추출된 항목의 상태 -->
+	<c:forEach items="${userList }" var="vo" varStatus="status">
+		<tr>
+			<td>${vo.no }</td>
+			<td>${vo.name }</td>
+			<td>${vo.email }</td>
+			<td>${status.index }</td>
+			<td>${status.count }</td>
+		</tr>
+	</c:forEach>
 	
 		
 

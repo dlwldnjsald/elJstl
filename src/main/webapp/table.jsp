@@ -1,22 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%-- Test URL
-http://localhost:8080/elJstl-live/table.jsp?r=5&c=3
+http://localhost:8080/elJstl/table.jsp?r=5&c=3
  --%>
 <%
 	String row = request.getParameter( "r" );
 	String col = request.getParameter( "c" );
 	
 	int nRow;
-	if( row == null ) {
-		nRow = 3;
-	} else {
-		nRow = Integer.parseInt( row );
+	if( row == null ) { //r 파라미터가 전달되지 않은 경우
+		nRow = 3;		//기본값
+	} else {			//r 파라미터가 전달되면 
+		nRow = Integer.parseInt( row ); //r파라미터 정수형으로 캐스팅
 	}
 	
 	int nCol;
 	if( col == null ) {
-		nCol = 3;
+		nCol = 3;      //기본값
 	} else {
 		nCol = Integer.parseInt( col );
 	}	
@@ -30,11 +30,11 @@ http://localhost:8080/elJstl-live/table.jsp?r=5&c=3
 <body>
 	<table border='1px' cellspacing='0' cellpadding='10px'>
 		<%
-		for(int i = 0 ; i < nRow; i++ ) {	
+		for(int i = 0 ; i < nRow; i++ ) {	//행루프
 		%>
 		<tr>
 			<%
-			for( int j = 0; j < nCol; j++ ) {
+			for( int j = 0; j < nCol; j++ ) { //열루프
 			%>
 			<td>cell(<%=i %>, <%=j %>)</td>
 			<%
