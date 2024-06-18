@@ -27,10 +27,19 @@
 	str = <%=str %>	<br/>
 	
 	
-	
 	<h2>el</h2>                 
-
-
+	<h3>Scope Test 1 (requestScope)</h3>
+	<!-- 요청의 속성에 접근하는 방법 -->
+	<ul>
+		<li>RequestScope : ${requestScope.userVo.no }</li>	
+		<li>RequestScope : ${requestScope.userVo.name }</li>
+		<li>RequestScope : ${requestScope.userVo.email }</li>
+		<li>RequestScope : ${requestScope.userVo.password }</li>
+		<li>RequestScope : ${requestScope.userVo.gender }</li>
+	
+	</ul>
+	
+	
 	
 	
 </body>

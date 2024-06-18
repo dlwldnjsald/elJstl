@@ -2,15 +2,19 @@ package vo;
 
 public class UserVo {
 
+	
+	//field -> private으로 정보 은닉필수
 	private int no;
 	private String name;
 	private String email;
 	private String password;
 	private String gender;
 	
+	//기본 생성자
 	public UserVo() {
 	}
 
+	//전체 생성자
 	public UserVo(int no, String name, String email, String password, String gender) {
 		this.no = no;
 		this.name = name;
@@ -19,6 +23,11 @@ public class UserVo {
 		this.gender = gender;
 	}
 
+	//getter,setter세팅을 통한 우회접근
+	//명명규칙의 규약이 있다.
+	//명명규칙을 지키는 이유 EL때문
+	//getter-> get필드명(); 
+	//setter-> set필드명(타입 입력값);
 	public int getNo() {
 		return no;
 	}
