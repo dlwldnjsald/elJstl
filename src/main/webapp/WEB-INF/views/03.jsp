@@ -11,7 +11,8 @@
 	
 	<!-- localhost:8088/eljstl/03?id=you&pw=1111&name=재석&num1=100&num2=200 -->	
 	
-	<h2>자바문법 parameter값 꺼내쓰기</h2>	
+	<h2>자바문법 parameter값 꺼내쓰기</h2>
+		
 	<% 
 	String id= request.getParameter("id");
 	String pw= request.getParameter("pw");
