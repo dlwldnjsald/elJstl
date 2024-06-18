@@ -42,8 +42,8 @@ public class Servlet01 extends HttpServlet {
 		//필드 세팅
 		vo.setNo(100);
 		vo.setEmail("hong@example.com");
-		//vo.setPassword("");
-		//vo.setGender("");
+		//vo.setPassword("123");
+		//vo.setGender("m");
 		
 		
 		//req 요청 속성에 데이터 설정해주기
