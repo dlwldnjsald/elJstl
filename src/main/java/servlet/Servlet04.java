@@ -32,7 +32,7 @@ public class Servlet04 extends HttpServlet {
 		
 		// ApplicationScope : 모든 서블릿이 공유하는 객체 -> 응용프로그램 범위의 bean에 접근
 		UserVo userVo3 = new UserVo(3, "장길산","jang", "9876", "male");
-		request.getServletContext().setAttribute("UserVo3", userVo3);//servletContext get해서 속성세팅
+		request.getServletContext().setAttribute("userVo3", userVo3);//servletContext get해서 속성세팅
 		
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/04.jsp");
