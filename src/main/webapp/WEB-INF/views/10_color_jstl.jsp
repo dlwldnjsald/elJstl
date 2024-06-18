@@ -15,24 +15,43 @@
 
 </head>
 <body>
-	
-	<%
+	<%-- 
+	<% //color=1
 	if( "1".equals( request.getParameter("color") ) ) {	
 	%>
 		<span style="color: red">빨강</span>
-	<%
+	<% //color=2
 	} else if( "2".equals( request.getParameter("color") ) ) {	
 	%>
 		<span style="color: green">녹색</span>
-	<%
+	<%//color=3
 	} else if( "3".equals( request.getParameter("color") ) ) {	
 	%>
 		<span style="color: blue">파랑</span>
 	<%
 	}
 	%>
-
-
+	--%>
+	
+	<!-- JSTL 
+		기본적인 조건 분기문 
+		c:if  -> 조건식 test 속성으로 expression language (EL)을 이용해서 테스트 
+		  -->
+	
+	<c:if test="${param.color == 1 }">
+		<span style="color: red">빨강</span>
+	</c:if>
+	
+	<c:if test="${param.color == 2 }">
+		<span style="color: green">녹색</span>
+	</c:if>
+	
+	<c:if test="${param.color == 3 }">
+		<span style="color: blue">파랑</span>
+	</c:if>
+	
+	
+	
 
 	
 
